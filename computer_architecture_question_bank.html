@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Architecture | Question Bank</title>
+<style>
+:root{--navy:#102b4e;--blue:#1769aa;--cyan:#19a7ce;--ink:#182638;--muted:#637286;--bg:#f3f7fb;--card:#fff;--line:#dce5ef;--green:#168568;--orange:#e99525}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{background:linear-gradient(120deg,#102b4e,#1769aa 65%,#19a7ce);color:#fff;padding:34px 6%;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:280px;height:280px;border:38px solid #ffffff16;border-radius:50%;right:-50px;top:-120px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800;color:#bdeeff}
+header h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;margin:10px 0}
+header p{max-width:760px;margin:0;color:#e7f5ff}
+.wrap{width:min(1200px,92%);margin:26px auto 60px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px}
+aside{align-self:start;position:sticky;top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 25px #102b4e0b}
+aside h2{font-size:1rem;margin:0 0 12px;color:var(--navy)}
+nav a{display:block;padding:9px 11px;margin:3px 0;border-radius:9px;text-decoration:none;color:#38516b;font-size:.91rem}
+nav a:hover{background:#eaf5ff;color:var(--blue)}
+.note{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+main{min-width:0}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+input[type=search]{flex:1;min-width:200px;padding:12px 14px;border:1px solid #cbd8e6;border-radius:10px;font:inherit;background:#fff}
+button{border:0;border-radius:10px;padding:11px 15px;font:inherit;font-weight:700;cursor:pointer}
+.primary{background:var(--blue);color:#fff}.secondary{background:#e5eef8;color:var(--navy)}
+.question{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:18px;overflow:hidden;box-shadow:0 6px 20px #102b4e08}
+.qhead{padding:20px 22px;display:flex;gap:14px;align-items:flex-start;background:linear-gradient(90deg,#fafdff,#fff);border-bottom:1px solid var(--line)}
+.num{background:var(--navy);color:#fff;min-width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-weight:800}
+.qhead h2{font-size:1.12rem;line-height:1.4;margin:0 0 5px;color:var(--navy)}
+.meta{font-size:.78rem;font-weight:800;letter-spacing:.4px;color:var(--blue);text-transform:uppercase}
+.answer{padding:20px 22px}.answer h3{margin:18px 0 7px;color:var(--navy);font-size:1rem}.answer h3:first-child{margin-top:0}
+.answer p{margin:7px 0}.answer ul,.answer ol{padding-left:23px;margin:8px 0}.answer li{margin:4px 0}
+.callout{background:#eef8ff;border-left:4px solid var(--cyan);padding:12px 14px;border-radius:7px;margin:12px 0}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.pill{background:#eaf5ff;color:#14558b;padding:4px 9px;border-radius:99px;font-size:.76rem;font-weight:700}
+.diagram{border:1px dashed #9bb8d1;border-radius:12px;background:#fbfdff;padding:16px;margin:12px 0;overflow-x:auto}
+.flow{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;min-width:300px}
+.node{padding:10px 13px;border:2px solid #4589c5;border-radius:9px;background:#eaf5ff;text-align:center;font-weight:700;min-width:110px}
+.node.green{border-color:#29947a;background:#e8faf4}.node.orange{border-color:#d99125;background:#fff5df}
+.arrow{font-size:1.45rem;color:#54738f;font-weight:900}
+.diagram-caption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:10px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.91rem}th,td{border:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}th{background:#edf5fc;color:var(--navy)}
+.code{font-family:Consolas,monospace;background:#102b4e;color:#e7f5ff;padding:12px;border-radius:9px;overflow:auto;white-space:pre}
+footer{text-align:center;padding:22px;color:var(--muted);font-size:.85rem}
+.hidden{display:none!important}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}aside{position:static}nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.note{display:none}.answer,.qhead{padding:16px}}
+@media print{body{background:#fff}header{padding:20px}.wrap{display:block;width:100%;margin:12px auto}aside,.toolbar{display:none}.question{break-inside:avoid;box-shadow:none}.answer{display:block!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Name:Parneet kaur • Roll no: 1826069 • Course:BPT • year:1st year</div>
+  <h1>Computer Architecture<br>Question Bank & Solutions</h1>
+  <p>Eight assessment questions with exam-ready answers, comparison tables, and simple diagrams/flowcharts. Use search to find a topic or print the page for revision.</p>
+</header>
+<div class="wrap">
+<aside>
+  <h2>Question Navigator</h2>
+  <nav>
+    <a href="#q1">01 · Generations of computers</a>
+    <a href="#q2">02 · Computer block diagram</a>
+    <a href="#q3">03 · Optical & card scanning</a>
+    <a href="#q4">04 · Machine vs assembly</a>
+    <a href="#q5">05 · Input devices</a>
+    <a href="#q6">06 · Plotter vs monitor</a>
+    <a href="#q7">07 · Biometric reliability</a>
+    <a href="#q8">08 · Accessible workstation</a>
+  </nav>
+  <div class="note">Tip: learn each definition, draw the diagram, and finish with one advantage and one limitation.</div>
+</aside>
+<main>
+<div class="toolbar">
+  <input id="search" type="search" placeholder="Search questions or keywords… (e.g. barcode, CPU, biometric)">
+  <button class="primary" onclick="toggleAll(true)">Expand all</button>
+  <button class="secondary" onclick="toggleAll(false)">Collapse all</button>
+  <button class="secondary" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<section class="question" id="q1">
+<div class="qhead"><div class="num">Q1</div><div><div class="meta">Remembering · Knowledge</div><h2>List four primary characteristics of a modern digital computer and identify the key hardware technology in each of the five generations.</h2></div></div>
+<div class="answer">
+<h3>Four primary characteristics</h3>
+<ol><li><b>Speed:</b> performs millions or billions of operations per second.</li><li><b>Accuracy:</b> produces correct results when the data and instructions are correct.</li><li><b>Storage:</b> stores large amounts of data and retrieves it quickly.</li><li><b>Automation and diligence:</b> follows instructions automatically and can repeat tasks without getting tired.</li></ol>
+<h3>Five generations of computers</h3>
+<table><tr><th>Generation</th><th>Main technology</th><th>Key features / examples</th></tr>
+<tr><td>First (approx. 1940s–1950s)</td><td>Vacuum tubes</td><td>Very large, hot, expensive; machine language. Example: ENIAC.</td></tr>
+<tr><td>Second (1950s–1960s)</td><td>Transistors</td><td>Smaller, faster, more reliable and energy-efficient.</td></tr>
+<tr><td>Third (1960s–1970s)</td><td>Integrated circuits (ICs)</td><td>Many components on one chip; operating systems became more common.</td></tr>
+<tr><td>Fourth (1970s onward)</td><td>Microprocessors using VLSI</td><td>Personal computers, compact devices, affordable computing.</td></tr>
+<tr><td>Fifth (current / developing)</td><td>ULSI, parallel processing and AI-oriented technologies</td><td>AI applications, natural-language systems, robotics and advanced processing.</td></tr></table>
+<div class="callout"><b>Conclusion:</b> computer generations are mainly distinguished by the hardware technology used to build their processing circuits.</div>
+</div></section>
+
+<section class="question" id="q2">
+<div class="qhead"><div class="num">Q2</div><div><div class="meta">Understanding · Comprehension</div><h2>Explain the flow of data, instructions and control signals within a computer using a block diagram.</h2></div></div>
+<div class="answer">
+<p>A computer system consists of input, memory, the CPU and output units. Data and instructions enter through input devices; the CPU processes them using the control unit and ALU; results may be stored in memory and sent to output devices.</p>
+<div class="diagram"><div class="flow"><div class="node">Input Unit</div><div class="arrow">→</div><div class="node">Main Memory</div><div class="arrow">↔</div><div class="node green">CPU</div><div class="arrow">→</div><div class="node">Output Unit</div></div><div class="flow" style="margin-top:12px"><div class="node orange">Control Unit (CU)</div><div class="arrow">↔</div><div class="node orange">ALU</div><div class="arrow">↔</div><div class="node orange">Registers</div></div><div class="diagram-caption">Simplified functional block diagram — draw boxes and arrows clearly in the exam.</div></div>
+<h3>Role of each unit</h3>
+<ul><li><b>Input unit:</b> accepts data and instructions and converts them into machine-readable form.</li><li><b>Memory:</b> holds instructions, input data, intermediate results and final results.</li><li><b>Control Unit:</b> fetches and decodes instructions, then sends control signals to coordinate operations.</li><li><b>ALU:</b> performs arithmetic operations and logical comparisons.</li><li><b>Registers:</b> provide very fast temporary storage inside the CPU.</li><li><b>Output unit:</b> presents results as text, images, sound or printed output.</li></ul>
+<h3>Instruction cycle flowchart</h3>
+<div class="diagram"><div class="flow"><div class="node">Fetch instruction</div><div class="arrow">→</div><div class="node">Decode</div><div class="arrow">→</div><div class="node">Execute</div><div class="arrow">→</div><div class="node green">Store result</div><div class="arrow">↺</div></div><div class="diagram-caption">The cycle repeats until the program finishes or a stop instruction is reached.</div></div>
+<p><b>Data buses</b> carry data, <b>address buses</b> identify memory locations, and <b>control buses</b> carry signals such as read and write.</p>
+</div></section>
+
+<section class="question" id="q3">
+<div class="qhead"><div class="num">Q3</div><div><div class="meta">Applying · Application</div><h2>Demonstrate how optical data scanning devices and electronic card readers can automate attendance and library checkouts.</h2></div></div>
+<div class="answer">
+<h3>A. Optical scanning</h3>
+<p>A barcode reader shines light on a printed barcode and senses reflected light; an OMR reader detects marked bubbles on a form. OCR software recognises printed characters, while QR scanners decode a two-dimensional pattern.</p>
+<div class="diagram"><div class="flow"><div class="node">Scan ID / QR</div><div class="arrow">→</div><div class="node">Decode code</div><div class="arrow">→</div><div class="node">Find student record</div><div class="arrow">→</div><div class="node green">Save attendance</div></div></div>
+<h3>B. Electronic card / RFID reader</h3>
+<p>An RFID reader communicates with a card or tag using radio waves. A contact smart-card reader reads a chip when the card is inserted or tapped, depending on the system.</p>
+<div class="diagram"><div class="flow"><div class="node">Tap library card</div><div class="arrow">→</div><div class="node">Read card ID</div><div class="arrow">→</div><div class="node">Check database</div><div class="arrow">→</div><div class="node green">Issue / return book</div></div></div>
+<h3>Campus examples</h3>
+<ul><li><b>Attendance:</b> student scans a QR code or ID card; the system verifies the student and records date and time.</li><li><b>Library:</b> staff or student scans the book barcode and student card; the database updates the loan and due date.</li></ul>
+<table><tr><th>Benefits</th><th>Limitations / controls</th></tr><tr><td>Fast entry, fewer typing errors, searchable records, automatic timestamps.</td><td>Damaged codes/cards can fail; duplicate scans must be prevented; protect student data and provide a manual fallback.</td></tr></table>
+</div></section>
+
+<section class="question" id="q4">
+<div class="qhead"><div class="num">Q4</div><div><div class="meta">Analyzing · Analysis</div><h2>Distinguish machine language and assembly language in terms of execution speed, hardware dependence, translation requirements and programmer complexity.</h2></div></div>
+<div class="answer">
+<table><tr><th>Basis</th><th>Machine language</th><th>Assembly language</th></tr>
+<tr><td>Form</td><td>Binary bits (0s and 1s)</td><td>Mnemonic codes such as MOV, ADD and SUB</td></tr>
+<tr><td>Execution</td><td>Executed directly by the processor</td><td>Must be translated by an assembler into machine code first</td></tr>
+<tr><td>Speed</td><td>No translation step at runtime for native instructions</td><td>After assembly, execution is generally comparable to equivalent machine code</td></tr>
+<tr><td>Hardware dependence</td><td>Specific to processor instruction set</td><td>Also processor/instruction-set dependent</td></tr>
+<tr><td>Programmer complexity</td><td>Very difficult to read, write and debug</td><td>Easier to read than binary, but still low-level</td></tr>
+<tr><td>Error handling</td><td>Hard to identify errors manually</td><td>Mnemonics and labels make code easier to inspect</td></tr></table>
+<h3>Translation flow</h3>
+<div class="diagram"><div class="flow"><div class="node">Assembly source</div><div class="arrow">→</div><div class="node orange">Assembler</div><div class="arrow">→</div><div class="node green">Machine code</div><div class="arrow">→</div><div class="node">CPU executes</div></div></div>
+<p><b>Conclusion:</b> machine language is the processor’s native form, while assembly language provides readable symbolic names for machine instructions. Both are low-level and hardware-dependent.</p>
+</div></section>
+
+<section class="question" id="q5">
+<div class="qhead"><div class="num">Q5</div><div><div class="meta">Analyzing · Analysis</div><h2>Compare point-and-draw devices such as a mouse and trackball with graphics digitizers/drawing tablets for CAD and digital art.</h2></div></div>
+<div class="answer">
+<table><tr><th>Feature</th><th>Mouse</th><th>Trackball</th><th>Graphics tablet / digitizer</th></tr>
+<tr><td>How it works</td><td>Move the device across a surface</td><td>Rotate a fixed ball with fingers/thumb</td><td>Move a stylus over a sensing surface</td></tr>
+<tr><td>Space required</td><td>Needs desk movement space</td><td>Little desk space</td><td>Needs tablet area</td></tr>
+<tr><td>Precision</td><td>Good for general pointing</td><td>Good control after practice</td><td>High precision; pressure and tilt may be supported</td></tr>
+<tr><td>Best use</td><td>Office tasks, browsing, general GUI work</td><td>Compact workstations, specialist control</td><td>Digital illustration, handwriting, tracing and detailed design</td></tr>
+<tr><td>Learning curve</td><td>Low</td><td>Moderate</td><td>Moderate; stylus practice helps</td></tr></table>
+<h3>Why tablets suit CAD and art</h3>
+<ul><li>Stylus input allows natural drawing and tracing.</li><li>Pressure sensitivity can vary line thickness for illustration.</li><li>Accurate coordinate input supports tracing and detailed geometry.</li><li>For CAD, a mouse is still common for menus and 3D navigation; a tablet is useful for sketching and annotation.</li></ul>
+<div class="callout"><b>Selection:</b> choose a mouse for affordable everyday use, a trackball where desk space is limited, and a graphics tablet when pen precision and natural strokes matter.</div>
+</div></section>
+
+<section class="question" id="q6">
+<div class="qhead"><div class="num">Q6</div><div><div class="meta">Evaluating · Evaluation</div><h2>Assess a drum/flatbed plotter versus an ultra-high-definition monitor and recommend a suitable system for civil-engineering blueprints.</h2></div></div>
+<div class="answer">
+<table><tr><th>Factor</th><th>Drum / flatbed plotter</th><th>Ultra-high-definition monitor</th></tr>
+<tr><td>Output</td><td>Permanent physical drawing on paper/media</td><td>Digital image on screen</td></tr>
+<tr><td>Scale and detail</td><td>Can print large-format, dimensionally detailed plans</td><td>Excellent zoom and on-screen detail, but limited by screen size</td></tr>
+<tr><td>Sharing</td><td>Physical copies can be distributed</td><td>Easy electronic sharing and collaboration</td></tr>
+<tr><td>Cost considerations</td><td>Equipment, paper, ink/toner and maintenance</td><td>Display cost, graphics hardware and power</td></tr>
+<tr><td>Best role</td><td>Submission, site use, signing and archival print</td><td>Review, CAD editing, zooming and checking layers</td></tr></table>
+<h3>Recommendation</h3>
+<p>For civil-engineering blueprints that must be submitted, measured, or used on-site, select a large-format plotter as the primary output device. Use an UHD monitor as a complementary device for editing and inspection.</p>
+<ul><li><b>Resolution:</b> choose a plotter resolution and line quality appropriate for fine CAD lines and text.</li><li><b>Scalability:</b> confirm the required paper width (for example, A1/A0) and supported media.</li><li><b>Long-term costs:</b> estimate consumables, maintenance and expected print volume.</li><li><b>Reliability:</b> check service availability and driver compatibility with the CAD software.</li></ul>
+<div class="callout">A plotter is best when a physical, large-scale drawing is required; a monitor is best for interactive review. A combined setup offers the strongest workflow.</div>
+</div></section>
+
+<section class="question" id="q7">
+<div class="qhead"><div class="num">Q7</div><div><div class="meta">Evaluating · Evaluation</div><h2>Critique the reliability and security vulnerabilities of vision-based iris/face recognition compared with voice recognition in high-ambient-noise, public settings.</h2></div></div>
+<div class="answer">
+<table><tr><th>Issue</th><th>Face / iris recognition</th><th>Voice recognition</th></tr>
+<tr><td>Environmental effect</td><td>Face: lighting, camera angle, masks and image quality matter. Iris: camera distance, eye visibility and capture quality matter.</td><td>Strongly affected by background noise, echoes, distance and microphone quality.</td></tr>
+<tr><td>Spoofing risk</td><td>Photos, video or artificial eyes may attack weak systems; liveness detection helps.</td><td>Recordings, replay, voice imitation or synthetic speech may attack weak systems.</td></tr>
+<tr><td>Privacy</td><td>Biometric images/templates are sensitive and difficult to replace if exposed.</td><td>Voice samples can reveal identity and other personal information.</td></tr>
+<tr><td>Accessibility</td><td>May not work equally well for every person or physical condition.</td><td>Can be difficult for people with speech differences or in noisy environments.</td></tr>
+<tr><td>Mitigations</td><td>Liveness checks, secure templates, controlled camera position, human fallback.</td><td>Noise-cancelling microphones, anti-replay checks, challenge phrases, human fallback.</td></tr></table>
+<h3>Operational recommendation</h3>
+<ul><li>In high ambient noise, voice recognition alone is a poor choice because the signal may be unclear.</li><li>Face recognition can be more practical where cameras and lighting are controlled; iris systems can be accurate with good capture equipment and user cooperation.</li><li>No biometric is perfect. Use multi-factor authentication (for example, card plus biometric), rate limits, encryption, access controls and audit logs.</li><li>Provide an accessible non-biometric alternative, clear consent and a policy for deletion/retention of biometric data.</li></ul>
+<div class="callout"><b>Conclusion:</b> choose based on the threat model and environment, test false-acceptance and false-rejection rates on the actual user population, and never treat a biometric match as completely risk-free.</div>
+</div></section>
+
+<section class="question" id="q8">
+<div class="qhead"><div class="num">Q8</div><div><div class="meta">Creating · Synthesis</div><h2>Design an accessible, hands-free computer workstation for a user with limited arm mobility using speech and specialised output devices.</h2></div></div>
+<div class="answer">
+<h3>Proposed design</h3>
+<div class="diagram"><div class="flow"><div class="node">Speech microphone</div><div class="arrow">→</div><div class="node">Speech recognition</div><div class="arrow">→</div><div class="node green">Computer / apps</div></div><div class="flow" style="margin-top:10px"><div class="node">Voice commands</div><div class="arrow">↔</div><div class="node orange">Accessibility software</div><div class="arrow">↔</div><div class="node">Screen reader / speech output</div></div><div class="diagram-caption">Hands-free input and accessible output, with a backup control method.</div></div>
+<h3>Components and purpose</h3>
+<ol><li><b>Noise-cancelling microphone/headset:</b> captures the user's voice clearly.</li><li><b>Speech recognition and voice control:</b> supports dictation, opening applications, navigating menus and editing text.</li><li><b>Screen reader and text-to-speech:</b> reads on-screen text and status messages aloud.</li><li><b>Speech output / synthesiser:</b> allows the computer to speak typed text or alerts.</li><li><b>Accessible display:</b> adjustable monitor, large text, high contrast and scalable interface.</li><li><b>Alternative input:</b> switch, eye-gaze device or adaptive trackball if voice control fails or is tiring.</li><li><b>Ergonomics and safety:</b> adjustable desk, suitable seating, cable management and easy emergency access.</li></ol>
+<h3>Typical interaction flow</h3>
+<div class="diagram"><div class="flow"><div class="node">User speaks</div><div class="arrow">→</div><div class="node">System recognises command</div><div class="arrow">→</div><div class="node">App performs action</div><div class="arrow">→</div><div class="node green">Audio confirmation</div></div></div>
+<h3>Testing and evaluation</h3>
+<ul><li>Test recognition accuracy in the user's normal environment.</li><li>Allow commands to be repeated or cancelled and provide spoken confirmation for important actions.</li><li>Check that all controls can be reached without arm movement and that the user can recover from mistakes.</li><li>Protect voice recordings and allow the microphone to be muted or disabled.</li><li>Customise commands and output speed to the user's preferences; involve the user in every design decision.</li></ul>
+<div class="callout"><b>Conclusion:</b> an effective workstation combines reliable voice input, spoken feedback, accessible software and a backup input method rather than depending on one technology alone.</div>
+</div></section>
+</main>
+</div>
+<footer>Prepared by:- Name:Parneet kaur • Roll no: 1826069 • Course:BPT • year:1st year</footer>
+<footer>Computer Architecture Question Bank • Use as a revision aid and verify course-specific terminology with your class notes.</footer>
+<script>
+const search = document.getElementById('search');
+search.addEventListener('input', () => {
+  const term = search.value.toLowerCase().trim();
+  document.querySelectorAll('.question').forEach(card => {
+    card.classList.toggle('hidden', term && !card.innerText.toLowerCase().includes(term));
+  });
+});
+function toggleAll(open) {
+  document.querySelectorAll('.answer').forEach(answer => answer.classList.toggle('hidden', !open));
+}
+// Keep answers visible by default; collapse button hides answer content.
+</script>
+</body>
+</html>
